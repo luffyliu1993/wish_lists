@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <title>Show Item</title>
+    </head>
+    <body>
+        <h1>{{item.item_name}}</h1>
+        <p>
+            <a href='/dashboard'>Home</a>
+            <a href='/logout'>Logout</a>
+        </p>
+        <p>
+            Users who added this product/item under their wish list:
+        </p>
+        {% for wish in wish_lists %}
+            <p>
+                {{wish.user_name}}
+            </p>
+        {% endfor %}
+    </body>
+</html>
